@@ -1,0 +1,29 @@
+{
+    // 使用 IntelliSense 了解相关属性。 
+    // 悬停以查看现有属性的描述。
+    // 欲了解更多信息，请访问: https://go.microsoft.com/fwlink/?linkid=830387
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "name": "(gdb) Launch", // 显示名称，可以自定义
+            "type": "cppdbg", // 不要更改
+            "request": "launch", //请求配置类型，可以为 “launch”（启动）或 “attach”（附加）
+            "program": "${fileDirname}\\${fileBasenameNoExtension}.exe", //用于调试的目标程序
+            "args": [],
+            "stopAtEntry": false, //在程序入口处停止，一般不更改
+            "cwd": "${fileDirname}", //目标的工作目录，
+            "environment": [],
+            "externalConsole": false,
+            "MIMode": "gdb", //只能为gdb
+            "miDebuggerPath": "C:\\Qt\\mingw64\\bin\\gdb.exe", //gdb的路径
+            "setupCommands": [
+                {
+                    "description": "为 gdb 启用整齐打印",
+                    "text": "-enable-pretty-printing",
+                    "ignoreFailures": true
+                }
+            ],
+            "preLaunchTask": "C/C++: gcc.exe 生成活动文件" //在启动调试之前默认先编译，以便生成目标程序
+        }
+    ]
+}
