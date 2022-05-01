@@ -3,4 +3,5 @@
 #include <string>
 #include <string.h>
 #include <stack>
+#include <vector>
 using namespace std;
